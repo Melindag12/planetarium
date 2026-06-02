@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #020202;
+  color: white;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  overflow: hidden;
+}
+/* 🌌 Sterne Hintergrund */
+body::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  background-image:
+
+    /* Kleine Sterne */
+    radial-gradient(white 1px, transparent 1px),
+
+    /* Mittlere Sterne */
+    radial-gradient(rgba(255,255,255,0.8) 2px, transparent 2px),
+
+    /* Große Sterne */
+    radial-gradient(rgba(255,255,255,0.6) 3px, transparent 3px);
+
+  background-size:
+    120px 120px,
+    220px 220px,
+    340px 340px;
+
+  background-position:
+    0 0,
+    40px 60px,
+    130px 90px;
+
+  opacity: 0.5;
+
+  z-index: -1;
+
+  animation:
+    starsGlow 5s ease-in-out infinite;
+}
+
+/* Gesamtlayout */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 80px 100px;
+}
+
+/* Linke Seite */
+.left {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Erde */
+.planet {
+  width: 400px;
+  height: 400px;
+
+  border-radius: 50%;
+
+  background-image: url("https://le-cdn.website-editor.net/s/45ba722708834475b6ba8681e288e459/dms3rep/multi/opt/Mercury_Globe-MESSENGER_mosaic_centered_at_0degN-0degE-640w.jpg?Expires=1780671074&Signature=YYrRvVRhCyj6yqdOl6LJ590kI0QA7KMRQqEX-bVntXC12Q5Bvc34JZjNYd6ZpKpejmHxn1GW~HNqThjXZXhIUKjEx9yizNze5Lq-68KiPeH4A6D324DjmuXKRBWRfq-InLk1cqWqlsc7dO9htzpjNzJY0oxufCAkVV39CJEI0QJfj82Xx5OCqGSuV~W8yHiZHCQKtyJzYx9~B6ARzui-WafRFvnq7bTyrmvRENnKXPDPjNQ6Eda11txDOugHO3QZAS9kXGWNrL4b0O-KIljJaTb90YTf~i0VdQIwJhiUzUw2~y3JiWdN6uw~6WzEyD74~QBJPzCs2gfZx4oRKl574w__&Key-Pair-Id=K2NXBXLF010TJW");
+  background-size: cover;
+  background-position: center;
+
+
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Rechte Infoseite */
+.right {
+  width: 420px;
+}
+
+/* Kleine obere Zahl */
+.counter {
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+
+  margin-bottom: 40px;
+}
+
+/* Dünne Linie */
+.line {
+  width: 40px;
+  height: 2px;
+  background: rgba(255,255,255,0.6);
+
+  margin-bottom: 30px;
+}
+
+/* Titel */
+h1 {
+  font-size: 4rem;
+  font-weight: 300;
+
+  letter-spacing: 10px;
+
+  margin-bottom: 40px;
+}
+
+/* Beschreibung */
+.description {
+  color: rgba(255,255,255,0.75);
+
+  font-size: 1.2rem;
+  line-height: 1.9;
+
+  margin-bottom: 50px;
+}
+
+/* Fakten */
+.facts {
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.fact {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+
+  color: rgba(255,255,255,0.85);
+}
+
+.fact-title {
+  opacity: 0.6;
+}
+
+/* Mehr entdecken */
+.more {
+  margin-top: 60px;
+
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+
+  opacity: 0.7;
+}
+
+/* Schwebebewegung */
+@keyframes float {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+
+  .container {
+    flex-direction: column;
+    gap: 60px;
+
+    padding: 40px;
+  }
+
+  .planet {
+    width: 320px;
+    height: 320px;
+  }
+
+  .right {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}

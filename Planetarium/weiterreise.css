@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #020202;
+  overflow: hidden;
+
+  color: white;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🌌 Sterne */
+body::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(rgba(255,255,255,0.8) 2px, transparent 2px);
+
+  background-size:
+    120px 120px,
+    240px 240px;
+
+  opacity: 0.45;
+
+}
+
+.space {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+}
+
+/* 🚀 Rakete */
+.rocket {
+  font-size: 5rem;
+
+  margin-bottom: 80px;
+
+  animation:
+    flyRocket 2s ease-in-out infinite;
+}
+
+/* Titel */
+h1 {
+  letter-spacing: 8px;
+  font-weight: 300;
+
+  margin-bottom: 30px;
+}
+
+/* Text */
+p {
+  opacity: 0.6;
+  line-height: 1.8;
+}
+
+/* 🚀 Fluganimation */
+@keyframes flyRocket {
+
+  0% {
+    transform:
+      translateY(0)
+      rotate(-8deg);
+  }
+
+  25% {
+    transform:
+      translateY(-25px)
+      rotate(5deg);
+  }
+
+  50% {
+    transform:
+      translateY(-50px)
+      rotate(-5deg);
+  }
+
+  75% {
+    transform:
+      translateY(-25px)
+      rotate(5deg);
+  }
+
+  100% {
+    transform:
+      translateY(0)
+      rotate(-8deg);
+  }
+}
+

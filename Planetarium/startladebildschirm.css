@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #020202;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: white;
+}
+
+/* 🌌 Sterne */
+.stars {
+  position: fixed;
+  inset: 0;
+
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(rgba(255,255,255,0.7) 2px, transparent 2px);
+
+  background-size:
+    120px 120px,
+    260px 260px;
+
+  opacity: 0.4;
+
+}
+
+/* Zentrierung */
+.loader-screen {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* Kreis */
+.circle {
+  width: 320px;
+  height: 320px;
+
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.35);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 120px;
+
+  animation:
+    pulseCircle 4s ease-in-out infinite;
+}
+
+/* Titel */
+.circle h1 {
+  letter-spacing: 10px;
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+/* Untertitel */
+.subtitle {
+  opacity: 0.5;
+  font-size: 1.2rem;
+
+  margin-bottom: 40px;
+}
+
+/* Linie */
+.line {
+  width: 40px;
+  height: 2px;
+
+  background: rgba(255,255,255,0.5);
+}
+
+/* Sterne Bewegung */
+@keyframes starsMove {
+
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(300px);
+  }
+}
+
+/* Kreis Puls */
+@keyframes pulseCircle {
+
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
