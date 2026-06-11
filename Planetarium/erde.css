@@ -217,11 +217,11 @@ h1 {
     flex: none;
   }
 
-  .planet {
-    width: 280px;
-    height: 280px;
-    margin-bottom: 50px;
-  }
+.planet {
+    width: min(45vw, 220px);
+    height: min(45vw, 220px);
+    margin-bottom: 35px;
+}
 
   .right {
     width: 100%;
