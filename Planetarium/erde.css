@@ -145,7 +145,35 @@ h1 {
 .fact-title {
   opacity: 0.6;
 }
+/* Handy */
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 22px;
+    gap: 35px;
+  }
 
+  .right {
+    align-items: center;
+  }
+
+  .planet {
+    width: 200px;
+    height: 200px;
+  }
+
+  .line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .fact {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+}
 
 /* 🌍 Schwebebewegung */
 @keyframes float {
