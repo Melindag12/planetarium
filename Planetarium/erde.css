@@ -145,35 +145,7 @@ h1 {
 .fact-title {
   opacity: 0.6;
 }
-/* Handy */
-@media (max-width: 700px) {
-  .container {
-    flex-direction: column;
-    text-align: center;
-    padding: 35px 22px;
-    gap: 35px;
-  }
 
-  .right {
-    align-items: center;
-  }
-
-  .planet {
-    width: 200px;
-    height: 200px;
-  }
-
-  .line {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .fact {
-    flex-direction: column;
-    gap: 5px;
-    align-items: center;
-  }
-}
 
 /* 🌍 Schwebebewegung */
 @keyframes float {
@@ -217,5 +189,63 @@ h1 {
 
   100% {
     opacity: 0.35;
+  }
+}
+/* 📱 Handy-Ansicht */
+@media (max-width: 700px) {
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+
+    padding: 70px 28px 50px;
+    text-align: center;
+  }
+
+  .left {
+    width: 100%;
+    flex: none;
+  }
+
+  .planet {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 50px;
+  }
+
+  .right {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .line {
+    margin: 0 auto 30px;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    letter-spacing: 8px;
+    margin-bottom: 30px;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  .fact {
+    gap: 20px;
+    text-align: left;
   }
 }
