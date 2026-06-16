@@ -75,14 +75,14 @@ p {
     transform:
       rotate(0deg)
       translateX(100px)
-      rotate(90deg);
+      rotate(-90deg);
   }
 
   to {
     transform:
       rotate(360deg)
       translateX(100px)
-      rotate(-90deg);
+      rotate(90deg);
   }
 
 }
