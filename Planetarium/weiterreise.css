@@ -7,10 +7,8 @@
 body {
   background: #020202;
   overflow: hidden;
-
   color: white;
   font-family: "Helvetica Neue", Arial, sans-serif;
-
   height: 100vh;
 
   display: flex;
@@ -18,21 +16,14 @@ body {
   align-items: center;
 }
 
-/* 🌌 Sterne */
 body::before {
   content: "";
-
   position: fixed;
   inset: 0;
-
   background-image:
     radial-gradient(white 1px, transparent 1px),
     radial-gradient(rgba(255,255,255,0.8) 2px, transparent 2px);
-
-  background-size:
-    120px 120px,
-    240px 240px;
-
+  background-size: 120px 120px, 240px 240px;
   opacity: 0.45;
 }
 
@@ -42,47 +33,42 @@ body::before {
   text-align: center;
 }
 
-/* 🚀 Rakete */
-.rocket {
-  font-size: 5rem;
+.rocket-orbit {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 80px;
 
-  width: 0;
-  height: 0;
-
-  margin: 0 auto 180px auto;
-
-  animation: orbitRocket 4s linear infinite;
+  position: relative;
+  animation: orbit 3s linear infinite;
 }
 
-/* Titel */
+.rocket {
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  font-size: 5rem;
+
+  transform: translateY(-50%) rotate(-45deg);
+}
+
 h1 {
   letter-spacing: 8px;
   font-weight: 300;
-
   margin-bottom: 30px;
 }
 
-/* Text */
 p {
   opacity: 0.6;
   line-height: 1.8;
 }
 
-/* 🚀 Kreisflug */
-@keyframes orbitRocket {
-
+@keyframes orbit {
   from {
-    transform:
-      rotate(0deg)
-      translateX(100px)
-      rotate(90deg);
+    transform: rotate(0deg);
   }
 
   to {
-    transform:
-      rotate(360deg)
-      translateX(100px)
-      rotate(-90deg);
+    transform: rotate(360deg);
   }
-
 }
