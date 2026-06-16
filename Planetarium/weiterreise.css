@@ -39,7 +39,6 @@ body::before {
 .space {
   position: relative;
   z-index: 2;
-
   text-align: center;
 }
 
@@ -47,11 +46,12 @@ body::before {
 .rocket {
   font-size: 5rem;
 
-  margin-bottom: 80px;
+  width: 0;
+  height: 0;
 
-  display: inline-block;
+  margin: 0 auto 120px auto;
 
-  animation: loadingSpin 2s linear infinite;
+  animation: orbit 3s linear infinite;
 }
 
 /* Titel */
@@ -68,15 +68,21 @@ p {
   line-height: 1.8;
 }
 
-/* 🔄 Ladeanimation */
-@keyframes loadingSpin {
+/* 🚀 Kreisflug */
+@keyframes orbit {
 
   from {
-    transform: rotate(0deg);
+    transform:
+      rotate(0deg)
+      translateX(60px)
+      rotate(0deg);
   }
 
   to {
-    transform: rotate(360deg);
+    transform:
+      rotate(360deg)
+      translateX(60px)
+      rotate(-360deg);
   }
 
 }
