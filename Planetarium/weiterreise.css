@@ -34,7 +34,6 @@ body::before {
     240px 240px;
 
   opacity: 0.45;
-
 }
 
 .space {
@@ -50,8 +49,9 @@ body::before {
 
   margin-bottom: 80px;
 
-  animation:
-    flyRocket 2s ease-in-out infinite;
+  display: inline-block;
+
+  animation: loadingSpin 2s linear infinite;
 }
 
 /* Titel */
@@ -68,37 +68,15 @@ p {
   line-height: 1.8;
 }
 
-/* 🚀 Fluganimation */
-@keyframes flyRocket {
+/* 🔄 Ladeanimation */
+@keyframes loadingSpin {
 
-  0% {
-    transform:
-      translateY(0)
-      rotate(-8deg);
+  from {
+    transform: rotate(0deg);
   }
 
-  25% {
-    transform:
-      translateY(-25px)
-      rotate(5deg);
+  to {
+    transform: rotate(360deg);
   }
 
-  50% {
-    transform:
-      translateY(-50px)
-      rotate(-5deg);
-  }
-
-  75% {
-    transform:
-      translateY(-25px)
-      rotate(5deg);
-  }
-
-  100% {
-    transform:
-      translateY(0)
-      rotate(-8deg);
-  }
 }
-
