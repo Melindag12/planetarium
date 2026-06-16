@@ -39,6 +39,7 @@ body::before {
 .space {
   position: relative;
   z-index: 2;
+
   text-align: center;
 }
 
@@ -46,12 +47,14 @@ body::before {
 .rocket {
   font-size: 5rem;
 
+  position: relative;
+
   width: 0;
   height: 0;
 
-  margin: 0 auto 120px auto;
+  margin: 0 auto 180px auto;
 
-  animation: orbit 3s linear infinite;
+  animation: orbitRocket 4s linear infinite;
 }
 
 /* Titel */
@@ -68,21 +71,42 @@ p {
   line-height: 1.8;
 }
 
-/* 🚀 Kreisflug */
-@keyframes orbit {
+/* 🚀 Rakete fliegt einen Kreis */
+@keyframes orbitRocket {
 
-  from {
+  0% {
     transform:
       rotate(0deg)
-      translateX(60px)
-      rotate(0deg);
+      translateX(90px)
+      rotate(90deg);
   }
 
-  to {
+  25% {
+    transform:
+      rotate(90deg)
+      translateX(90px)
+      rotate(180deg);
+  }
+
+  50% {
+    transform:
+      rotate(180deg)
+      translateX(90px)
+      rotate(270deg);
+  }
+
+  75% {
+    transform:
+      rotate(270deg)
+      translateX(90px)
+      rotate(360deg);
+  }
+
+  100% {
     transform:
       rotate(360deg)
-      translateX(60px)
-      rotate(-360deg);
+      translateX(90px)
+      rotate(450deg);
   }
 
 }
