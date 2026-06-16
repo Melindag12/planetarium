@@ -82,7 +82,7 @@ p {
     transform:
       rotate(360deg)
       translateX(100px)
-      rotate(90deg);
+      rotate(0deg);
   }
 
 }
