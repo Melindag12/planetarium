@@ -49,7 +49,7 @@ body::before {
 
   font-size: 5rem;
 
-  transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(-50%) rotate(135deg);
 }
 
 h1 {
