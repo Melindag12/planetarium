@@ -68,20 +68,18 @@ body::before {
   align-items: center;
 }
 
-/* Jupiter */
+/* Saturn */
 .planet {
-  width: 670px;
-  height: 500px;
+  width: 700px;
+  height: 420px;
 
-  border-radius: 50%;
-
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg");
-  background-size: cover;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/43/Saturnx.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
 
   animation: float 8s ease-in-out infinite;
 }
-
 /* Rechte Infoseite */
 .right {
   width: 420px;
