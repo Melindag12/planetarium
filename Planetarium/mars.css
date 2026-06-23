@@ -170,28 +170,59 @@ h1 {
   }
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
+/* 📱 Handy-Ansicht */
+@media (max-width: 700px) {
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
 
   .container {
     flex-direction: column;
-    gap: 60px;
+    justify-content: flex-start;
+    align-items: center;
 
-    padding: 40px;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+
+    padding: 30px 20px 40px;
+    text-align: center;
   }
 
-  .planet {
-    width: 320px;
-    height: 320px;
+  .left {
+    width: 100%;
+    flex: none;
   }
+
+.planet {
+    width: min(45vw, 220px);
+    height: min(45vw, 220px);
+    margin-bottom: 35px;
+}
 
   .right {
     width: 100%;
-    max-width: 500px;
+    max-width: 420px;
   }
 
-  h1 {
-    font-size: 3rem;
+  .line {
+    margin: 0 auto 30px;
   }
-  
+
+ h1 {
+    font-size: 2rem;
+    letter-spacing: 4px;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .fact {
+    font-size: 0.85rem;
+  }
+
 }
